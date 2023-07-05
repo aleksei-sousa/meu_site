@@ -1,0 +1,21 @@
+@media screen and (max-width: 1000px) {
+    .logomarca{
+        width: 34%;
+        background-color: transparent;
+    }
+    .nav-btn{
+        font-size: 17px;
+    }
+    .h-container{
+        height: inherit;
+    }
+    .nav-btns{
+        border-radius: 0 0 20px 0;
+        width: auto;
+    }
+    header{
+        background-color: var(--azul);
+        height: 50px;
+    }
+
+}
