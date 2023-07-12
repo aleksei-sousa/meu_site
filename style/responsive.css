@@ -17,5 +17,44 @@
         background-color: var(--azul);
         height: 50px;
     }
+    .container-linguagens {
+        height: 100%;
+        max-width: 503px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "js html "
+            "css git"
+            "photoshop apis";
+        grid-gap: 37px;
+        padding: 0 21px;
+    }
+}
 
+@media screen and (max-width: 1200px) {
+    .projetos{
+        width: 800px;
+    .slide{
+        margin-left:-21px
+    }
+
+}
+}
+
+@media screen and (max-width: 850px) {
+    .projetos{
+        width: 360px;
+}
+.slide{
+    margin-left:-21px
+}
+.linguagens{
+    height: 1100px;
+    margin-top: 0px;
+    justify-content: start;
+}
+.linguagens-container{
+    margin-top: 50px;
+}
 }

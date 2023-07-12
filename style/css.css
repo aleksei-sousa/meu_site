@@ -230,9 +230,10 @@ main{
 
 .linguagens{
     height: 950px;
-    background-image: url('../img/backgroung-linguagens.jpg');
+    background-image: url('../img/background-linguagens.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -335,28 +336,18 @@ main{
 #apis{
     grid-area: apis;
 }
-
-
-
-
-
-
-
 .container-projetos{
     margin-top: 150px;
     background-color: rgb(252, 229, 230);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     padding: 47px;
 }
 .projetos{
-
-    max-width: 1200px;
+    margin: 0 auto;
+    width: 1200px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0 21px;
 }
 .projetos-subtitulo{
     display: flex;
@@ -390,18 +381,18 @@ main{
     max-width: 1200px;
 }
 .content-slide-hidden{
-    max-width: 900px;
-    min-width: 542px;
+    max-width: 1059px;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    padding: 8px;
 }
 .slide{
     display: flex;
     flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
+    width: 135%;
     padding: 10px 0;
+
 }
 .cards-projeto{
     width: 100%;
@@ -546,17 +537,25 @@ footer{
 
 
 #box {
+    width: 270px;
+    margin: 0 auto;
   display: flex;
   align-items: baseline;
   flex-direction: column;
-  width: 30%;
   height: 370px;
   color: white;
   font-family: 'Raleway';
   font-size: 2.5rem;
   z-index: 2;
 }
+.gradient-container{
+    min-width: 350px;
+    height: auto;
+    align-items: center;
+    background-color: #6fba82;
+}
 .gradient-border {
+
   --borderWidth: 3px;
   background: #1D1F20;
   position: relative;
@@ -571,7 +570,7 @@ footer{
   width: calc(103% + var(--borderWidth) * 2);
   background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
   border-radius: calc(2 * var(--borderWidth));
-  z-index: -1;
+  z-index: -1;  
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
 }
