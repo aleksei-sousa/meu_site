@@ -30,9 +30,12 @@
         grid-gap: 37px;
         padding: 0 21px;
     }
+    .gradient-container {
+        height: 89%;
+    }
 }
 
-@media screen and (max-width: 1200px) {
+/*@media screen and (max-width: 1200px) {
     .projetos{
         width: 800px;
     .slide{
@@ -57,4 +60,4 @@
 .linguagens-container{
     margin-top: 50px;
 }
-}
+}*/

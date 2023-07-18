@@ -339,15 +339,13 @@ main{
 .container-projetos{
     margin-top: 150px;
     background-color: rgb(252, 229, 230);
-    padding: 47px;
+    padding: 47px 0;
 }
 .projetos{
     margin: 0 auto;
-    width: 1200px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 21px;
 }
 .projetos-subtitulo{
     display: flex;
@@ -381,17 +379,21 @@ main{
     max-width: 1200px;
 }
 .content-slide-hidden{
-    max-width: 1059px;
+    max-width: 1200px;
+    min-width: 542px;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-    padding: 8px;
+    margin: auto;
 }
 .slide{
     display: flex;
     flex-direction: row;
-    width: 135%;
+    width: 200%;
     padding: 10px 0;
+    height: 450px;
+    transform: translateX(0px);
+    margin-left: 10px;
 
 }
 .cards-projeto{
@@ -461,15 +463,18 @@ main{
     justify-content: center;
     width: 1px;
 }
-.fa-arrow-left-long, .fa-arrow-right-long{
-    font-size: 40px;
+
+.btns_slide{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    justify-content: space-between;
 }
-.fa-arrow-left-long{
-    margin-right: 15px;
+.btn_slide{
+    width: 30px;
+    height: 30px;
+    background-color: #07b39b;
 }
-
-
-
 
 
 
@@ -537,25 +542,22 @@ footer{
 
 
 #box {
-    width: 270px;
+    width: 90%;
+    height: 100%;
     margin: 0 auto;
   display: flex;
   align-items: baseline;
   flex-direction: column;
-  height: 370px;
+
   color: white;
   font-family: 'Raleway';
   font-size: 2.5rem;
   z-index: 2;
 }
 .gradient-container{
-    min-width: 350px;
-    height: auto;
-    align-items: center;
-    background-color: #6fba82;
+    height: 100%;
 }
 .gradient-border {
-
   --borderWidth: 3px;
   background: #1D1F20;
   position: relative;
