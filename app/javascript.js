@@ -1,21 +1,17 @@
-const btn_slide = [...document.querySelectorAll(".btn_slide")]
+    /*$(".demo").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [{
+            breakpoint: 800,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true
+                },
+                breakpoint: 300,
+                settings: "unslick"
+        }]
+    });*/
 
-btn_slide.map((ele)=>{
-    ele.addEventListener("click", (e)=>{
-        console.log(e.target.id)
-    })
-})
-
-
-const margin = ()=>{
-    
-}
-
-const box = document.querySelector(".slide")
-console.log(box.getAttribute("marginLeft"))
-
-const pixel = ()=>{
-    console.log(document.querySelector(".gradient-container"))
-}
-
-//pixel()
+ 

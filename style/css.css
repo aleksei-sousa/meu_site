@@ -246,7 +246,6 @@ main{
     flex-direction: column;
     align-items: center;
     max-width: 800px;
-    height: 670px;
 }
 .sub2::after{
     content: " ";
@@ -277,6 +276,7 @@ main{
         "git photoshop apis";
     grid-gap: 37px;
     padding: 0 21px;
+    grid-gap
 }
 .linguagem{
     background: var(--claro);
@@ -413,7 +413,7 @@ main{
 .projeto-descricao{
     background-color: white;
     height: 100%;
-    padding: 7px 16px;
+    padding: 7px 21px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -429,9 +429,9 @@ main{
     padding: 0 10px;
 }
 .desc-projeto{
-    color: black;
+    color: rgb(95, 95, 95);
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .credito-projeto{
     font-size: 15px;
@@ -542,13 +542,10 @@ footer{
 
 
 #box {
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-  display: flex;
+    height: 432px;
+      display: flex;
   align-items: baseline;
   flex-direction: column;
-
   color: white;
   font-family: 'Raleway';
   font-size: 2.5rem;
@@ -556,6 +553,8 @@ footer{
 }
 .gradient-container{
     height: 100%;
+    padding: 8px 0;
+
 }
 .gradient-border {
   --borderWidth: 3px;
