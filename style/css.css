@@ -34,19 +34,49 @@ header{
     padding: 0px 10px 0 10px;
     margin: auto;
 }
+.link-menu-hamburguer{
+    padding: 10px;
+    display: none;
+}
 .nav-btn{
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     font-size: 22px;
     color: antiquewhite;
+
+    background-color: transparent;
+    z-index: 16;
+}
+.link-nav{
+    position: relative;
+}
+.link-nav:hover::after{
+    position: absolute;
+    content: ' ';
+    background-color: antiquewhite;
+    width: 100%;
+    height: 3px;
+    z-index: -1;
+    left: 0px;
+    top: 28px;
+}
+.link-nav-ativa::after{
+    position: absolute;
+    content: ' ';
+    background-color: antiquewhite;
+    width: 100%;
+    height: 3px;
+    z-index: -1;
+    left: 0px;
+    top: 28px;
 }
 .container-inicio{
     height: 691px;
 }
-.inicio{
+/*.inicio{
     border-bottom: 3px solid rgb(255, 255, 255);
-}
+}*/
 .logomarca{
     font-family: 'Bebas Neue', sans-serif;
     font-size: 30px;
@@ -67,6 +97,7 @@ header{
     align-items: center;
     border-radius: 0px 0px 20px 20px;
     justify-content: center;
+    transition: .3s;
 }
 main{
 
@@ -75,7 +106,7 @@ main{
     width: 100%;
     height: 760px;
     position: relative;
-    top: -70px;
+    top: -69px;
     background-color: var(--azul);
     display: flex;
     align-items: center;
@@ -148,15 +179,16 @@ main{
     top: -42px;
     z-index: 2;
 }
-.nav-btn:hover{
+/*.nav-btn:hover{
     border-bottom: 3px solid var(--claro);
-}
+}*/
 .container-sobre-mim{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 800px;
     justify-content: center;
+    background-color: var(--claro);
 }
 .sobre-mim{
     background-color: var(--claro);
@@ -253,12 +285,12 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 1px 6px 7px rgb(136, 136, 136);
+    padding-top: 50px;
 }
 .linguagens-container{
     display: flex;
@@ -356,9 +388,8 @@ main{
     grid-area: apis;
 }
 .container-projetos{
-    margin-top: 150px;
+    padding: 197px 0;
     background-color: rgb(252, 229, 230);
-    padding: 47px 0;
 }
 .projetos{
     margin: 0 auto;
@@ -494,7 +525,18 @@ main{
     height: 30px;
     background-color: #07b39b;
 }
-
+.menu-hamburguer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 20px;
+}
+.traco{
+    width: 100%;
+    height: 2px;
+    background-color: #dff2ff;
+}
 
 
 
@@ -517,7 +559,6 @@ main{
 
 
 footer{
-    margin-top: 150px;
     background-color: var(--azul);
 }
 .footer-container{

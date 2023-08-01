@@ -1,6 +1,5 @@
 @media screen and (max-width: 1000px) {
     .logomarca{
-        width: 34%;
         background-color: transparent;
     }
     .nav-btn{
@@ -14,7 +13,6 @@
         width: auto;
     }
     header{
-        background-color: var(--azul);
         height: 50px;
     }
     .container-linguagens {
@@ -52,8 +50,37 @@
 }
 */
 
-@media screen and (max-width: 850px) {
-    /*.desc-projeto {
-        font-weight: 500;
-}*/
+@media screen and (max-width: 800px) {
+    .h-container{
+        align-items: normal;
+        padding: 0px 0px 0 10px;
+    }
+    .nav-btns{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(17, 56, 56);
+        width: 182px;
+        height: 100vh;
+        justify-content: start;
+        padding-top: 60px;
+        align-items: end;
+        gap: 0;
+        position: absolute;
+        right: -250px;
+    }
+    .nav-btn{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        padding-right: 10px;
+    }
+    .link-menu-hamburguer{
+        display: block;
+        z-index: 1;
+        padding: 17px 12px;
+
+    }
 }
