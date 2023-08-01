@@ -1,48 +1,32 @@
-const btn = [...document.querySelectorAll('.link-nav')]
+const btn = [...document.querySelectorAll('.nav-btn')]
 let botao = [...document.querySelectorAll('.link-nav')]
 const main = document.querySelector('main') 
-botao.map((e)=>{
-    //e.classList.remove('nav-btn-ativa')
-})
+
 btn.map((ele) => {
     ele.addEventListener('click', ()=>{
+        
         classe = 'link-nav-ativa'
-        removerClasse(btn,classe)
-        adicionarClasse(ele, btn,classe)
+        let elementos = botao
+        removerClasse(elementos ,classe)
+        let elemento = ele.children
+        //console.log(ele.children)
+        adicionarClasse(elemento, classe)
 
-        /*let elemento =''
-        switch (ele.id){
-            case "btn_alteracoes1":
-                elemento = document.querySelector("#btn_alteracoes1")
-            break;
-            case "btn_alteracoes2":
-                elemento = document.querySelector("#btn_alteracoes2")
-            break;
-            case "btn_alteracoes3":
-                elemento = document.querySelector("#btn_alteracoes3")
-            break;
-        alterarClasse(array, elemento, classe)
-
-        }
-
-        classe = 'form_dados_desativada'
-        array = [...document.querySelectorAll('.form_alteracoes')]*/
     })
     
 });
 
-const removerClasse = (array, classe)=>{
-    array.map((e)=>{
+const removerClasse = (elementos, classe)=>{
+    elementos.map((e)=>{
         e.classList.remove(classe)
         console.log("removido")
     })
-    //elemento.classList.toggle(classe)
 }
 
-const adicionarClasse = (ele, array, classe)=>{
+const adicionarClasse = (ele, classe)=>{
 
-        ele.classList.add(classe)
-        console.log("add")
+        ele[0].classList.add(classe)
+        console.log(ele[0])
 
     //elemento.classList.toggle(classe)
 }

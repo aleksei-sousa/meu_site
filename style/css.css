@@ -31,11 +31,10 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10px 0 10px;
     margin: auto;
+    padding: 0 21px;
 }
 .link-menu-hamburguer{
-    padding: 10px;
     display: none;
 }
 .nav-btn{
@@ -389,7 +388,7 @@ main{
 }
 .container-projetos{
     padding: 197px 0;
-    background-color: rgb(252, 229, 230);
+    background-color: var(--claro);
 }
 .projetos{
     margin: 0 auto;
