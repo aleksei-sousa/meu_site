@@ -1,62 +1,47 @@
 const btn = [...document.querySelectorAll('.nav-btn')]
-let botao = [...document.querySelectorAll('.link-nav')]
-const main = document.querySelector('main') 
+
+
 
 btn.map((ele) => {
     ele.addEventListener('click', ()=>{
         
         classe = 'link-nav-ativa'
-        let elementos = botao
-        removerClasse(elementos ,classe)
-        let elemento = ele.children
+        //console.log(elementos)
+        var botao = [...document.querySelectorAll('.link-nav')]
+        botao.map((e)=>{  
+            removerClasse(e ,classe)
+        })
+
+
+        elementoFilho = ele.children[0]
         //console.log(ele.children)
-        adicionarClasse(elemento, classe)
+        adicionarClasse(elementoFilho, classe)
 
     })
     
 });
 
 const removerClasse = (elementos, classe)=>{
-    elementos.map((e)=>{
-        e.classList.remove(classe)
-        console.log("removido")
-    })
+        elementos.classList.remove(classe)
 }
-
 const adicionarClasse = (ele, classe)=>{
-
-        ele[0].classList.add(classe)
-        console.log(ele[0])
-
-    //elemento.classList.toggle(classe)
+        ele.classList.add(classe)
 }
-
-/*btn.map((ele) => {
-    ele.addEventListener('click', ()=>{
-        let ele2 = document.querySelector('.form_alteracoes')
-        classe = "form_dados"
-        alterarClasse(ele2, classe)
-    })
-});*/
 
 let contadorSide = false
 let navbar = document.querySelector('.nav-btns')
 const sidebar = ()=>{
+    const main = document.querySelector('main') 
     contadorSide = !contadorSide;
    if(contadorSide){
         navbar.style.right = '0px'
         main.style.filter = 'brightness(0.8)'
+        document.querySelector('.h-background').style.filter = 'brightness(0.8)'
     } else {
         navbar.style.right = '-250px'
         main.style.filter = ''
+        document.querySelector('.h-background').style.filter = ''
     }
-
-    /*if (navbar.style.right == '-250px'){
-        navbar.style.right = '0px'
-        console.log(navbar.style.right)
-    }else if(navbar.style.right == '0px') {
-        navbar.style.right = '-250px'
-    }*/
 
 }
 function fecharSideBar () {
@@ -70,3 +55,26 @@ window.addEventListener('resize', (e)=>{
         sidebar()
     }
 })
+
+
+const alvo = document.querySelector('#inicio')
+//const header = document.querySelector('.h-background')
+const hBtns = document.querySelector(".h-btns")
+addEventListener("scroll", ()=>{
+
+    if(alvo.getBoundingClientRect().bottom < 326){
+        const header = document.querySelector('.h-background')
+        adicionarClasse(header, 'fade')
+        hBtns.style.maxWidth = '1009px';
+        //max-width: 1097px;
+
+    }
+    if(alvo.getBoundingClientRect().bottom > 326){
+        const header = document.querySelector('.h-background')
+        removerClasse(header, 'fade')
+        hBtns.style.maxWidth = '1200px';
+    }
+})
+console.log(window.screen.width)
+//let ddd = document.querySelector('.h-background').style.filter = 'brightness(0.8)'
+//ddd.style.filter = 'brightness(0.8)'

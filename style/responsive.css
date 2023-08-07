@@ -5,12 +5,11 @@
     .nav-btn{
         font-size: 17px;
     }
-    .h-container{
-        height: inherit;
-    }
+
     .nav-btns{
         border-radius: 0 0 20px 0;
         width: auto;
+        height: auto;
     }
     header{
         height: 50px;
@@ -36,6 +35,9 @@
     #box{
         height: 360px;
     }
+    .link-nav-ativa::after{
+        top: 22px;
+    }
 }
 
 /*
@@ -51,8 +53,13 @@
 */
 
 @media screen and (max-width: 800px) {
+    .h-btns{
+        padding: 0 21px;
+    }
     .h-container{
         align-items: normal;
+        height: 40px;
+        padding: 0;
 
     }
     .nav-btns{
@@ -67,6 +74,7 @@
         gap: 0;
         position: absolute;
         right: -250px;
+        top: 0;
     }
     .nav-btn{
         width: 100%;
@@ -82,5 +90,34 @@
         z-index: 1;
         padding: 21px 0;
 
+    }
+    .logomarca{
+        font-size: 25px;
+    }
+    .m-apresentacao{
+        top: 71%;
+    }
+    .ola{
+        font-size: 19px;
+    }
+    .meu-nome h1{
+        font-size: 28px;
+    }
+    .desenvolvedor h2{
+        font-size: 14px;
+    }
+    .auto-descricao{
+        width: 218px;
+        font-size: 12px;
+    }
+    .retangulo{
+        transform: rotate(-32deg);
+        top: 70px;
+    }
+    .sobre{
+        font-size: 20px;
+    }
+    .subtitulo{
+        font-size: 21px;
     }
 }
