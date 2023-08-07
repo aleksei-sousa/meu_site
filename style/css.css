@@ -24,6 +24,10 @@ header{
     z-index: 3;
     width: 100vw;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 .h-container{
     position: relative;
     max-width: 1200px;

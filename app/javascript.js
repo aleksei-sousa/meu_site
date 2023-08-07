@@ -16,6 +16,7 @@ btn.map((ele) => {
         elementoFilho = ele.children[0]
         //console.log(ele.children)
         adicionarClasse(elementoFilho, classe)
+        fecharSideBar ()
 
     })
     
@@ -50,6 +51,9 @@ function fecharSideBar () {
     }
 }
 
+
+
+//se for menor e o sidebar estiver ativo vai fechar o sidebar
 window.addEventListener('resize', (e)=>{
     if(window.innerWidth > 800 && contadorSide){
         sidebar()
@@ -58,10 +62,10 @@ window.addEventListener('resize', (e)=>{
 
 
 const alvo = document.querySelector('#inicio')
-//const header = document.querySelector('.h-background')
-const hBtns = document.querySelector(".h-btns")
-addEventListener("scroll", ()=>{
 
+const hBtns = document.querySelector(".h-btns")
+//função que esconde e mostra o plano nde fundo do header
+addEventListener("scroll", ()=>{
     if(alvo.getBoundingClientRect().bottom < 326){
         const header = document.querySelector('.h-background')
         adicionarClasse(header, 'fade')
