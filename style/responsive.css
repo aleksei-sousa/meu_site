@@ -14,7 +14,7 @@
     header{
         height: 50px;
     }
-    .container-linguagens {
+   /* .container-linguagens {
         height: 100%;
         max-width: 403px;
         display: grid;
@@ -25,7 +25,7 @@
             "css git"
             "photoshop apis";
         grid-gap: 23px;
-    }
+    }*/
     .linguagens-nome{
         font-size: 19px;
     }
@@ -40,17 +40,47 @@
     }
 }
 
-/*
-@media screen and (max-width: 1200px) {
-    .projetos{
-        width: 800px;
-    .slide{
-        margin-left:-21px
-    }
 
+@media screen and (max-width: 1200px) {
+    .container-linguagens{
+        display: block;
+        width: 570px;
+        /*gap: 20px;
+        display: flex;
+        flex-direction: column;*/
+    }
+    .conteudo-linguagens{
+        width: auto;
+        height: auto;
+    }
+    .exibicao-card {
+        width: 492px;
+        margin: 30px auto;
+        height: 384px;
+    }
+    .container-exibicao-card{
+        padding: 15px;
+    }
+    .info-card {
+        padding: 0px 30px 30px 30px;
+    }
+    .container-img{
+        height: 178px;
+    }
+.texto-info {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 16px;
+    line-height: 24px;
+}
+.btn-exibicao {
+    width: 109px;
+    padding: 6px 0;
+}
+.foto-exibir{
+    height: 185px;
 }
 }
-*/
 
 @media screen and (max-width: 800px) {
     .h-btns{

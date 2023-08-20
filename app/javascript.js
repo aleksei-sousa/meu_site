@@ -1,6 +1,6 @@
+
+
 const btn = [...document.querySelectorAll('.nav-btn')]
-
-
 
 btn.map((ele) => {
     ele.addEventListener('click', ()=>{
@@ -24,6 +24,7 @@ btn.map((ele) => {
 
 const removerClasse = (elementos, classe)=>{
         elementos.classList.remove(classe)
+        
 }
 const adicionarClasse = (ele, classe)=>{
         ele.classList.add(classe)
@@ -53,13 +54,13 @@ function fecharSideBar () {
 
 
 
-//se for menor e o sidebar estiver ativo vai fechar o sidebar
-window.addEventListener('resize', (e)=>{
-    if(window.innerWidth > 800 && contadorSide){
-        sidebar()
-    }
-})
 
+
+//se for menor que 1200 vai trocar classe
+/*if(window.innerWidth <=1200){
+    let ele = document.querySelector('.conteudo-linguagens')
+    adicionarClasse(ele, 'slide-cards')
+}*/
 
 const alvo = document.querySelector('#inicio')
 
@@ -79,6 +80,60 @@ addEventListener("scroll", ()=>{
         hBtns.style.maxWidth = '1200px';
     }
 })
-console.log(window.screen.width)
+
 //let ddd = document.querySelector('.h-background').style.filter = 'brightness(0.8)'
 //ddd.style.filter = 'brightness(0.8)'
+
+
+/*
+1 evento de entrada do mouse chamando uma função
+uma queryAll que vai marcar todos com display none
+*/
+const exibicaoCards = [...document.querySelectorAll(".exibicao-card")]
+const caards = [...document.querySelectorAll(".container-img")]
+console.log(caards)
+caards.map((e) => {
+    e.addEventListener("mouseover", (w)=>{
+        let id = w.target.dataset.id
+        exibicaoCards.forEach((e)=>{
+            removerClasse(e, 'active')
+        })
+        let ee = document.querySelector("#"+id)
+        adicionarClasse(ee,'active')
+
+    })
+
+})
+
+/*caards.map((e) => {
+    e.addEventListener("mouseout", (w)=>{
+                switch(w.target.classList[1]){
+            case 'js':
+                //console.log('js')
+                console.log(w.target)
+                w.target.style.display = 'block'
+                document.querySelector(".img-card2").style.display = 'none'
+                break
+            case 'html':
+                console.log('html')
+                break
+            case 'git':
+                console.log('git')
+                break
+            case 'sql':
+                console.log('sql')
+                break
+            case 'php':
+                console.log('php')
+                break
+            case 'ux':
+                console.log('ux')
+                break
+        }
+    })
+})*/
+
+
+function mouseOver (tt) {
+    
+}

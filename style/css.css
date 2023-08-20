@@ -244,6 +244,7 @@ main{
     font-family: 'PT Sans', sans-serif;
     font-size: 30px;
     font-weight: 700;
+    text-align: left;
 }
 .sub1::after{
     content: "";
@@ -299,12 +300,84 @@ main{
 
 
 
-
-
-
-
-
+/*.linguagens{
+    height: 950px;
+}*/
 .linguagens{
+    background-color: #c7e5ff;
+    padding: 50px 0;
+}
+.container-linguagens{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 21px;
+    align-items: center;
+}
+.conteudo-linguagens{
+    display: grid;
+    grid-template-areas: 
+    "js html git"
+    "sql php ux";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 600px;
+    height: 495px;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.exibicao-card{
+    width: 50%;
+    height: 495px;
+    gap: 17px;
+    background-color: white;
+    border-radius: 15px;
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    box-shadow: 3px 3px 6px 1px rgb(175, 175, 175);
+}
+.active{
+    display: flex;
+}
+.foto-exibir{
+    width: 100%;
+    height: 235px;
+}
+.ilustração-card{
+    width: 100%;
+    height: 100%;
+}
+.subtitulo-exibicao{
+    font-family: 'pt sans';
+    font-size: 28px;
+}
+
+.texto-info{
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 18px;
+    line-height: 30px;
+}
+.info-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 235px;
+    padding: 20px 30px 30px 30px;
+}
+.btn-exibicao{
+    background-color: var(--azul);
+    color: white;
+    width:120px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 17px;
+}
+/*.linguagens{
     height: 950px;
     background-image: url('../img/background-linguagens.jpg');
     background-repeat: no-repeat;
@@ -316,7 +389,7 @@ main{
     align-items: center;
     box-shadow: 1px 6px 7px rgb(136, 136, 136);
     padding-top: 50px;
-}
+}*/
 .linguagens-container{
     display: flex;
     flex-direction: column;
@@ -341,7 +414,7 @@ main{
     margin: auto;
     background-color: var(--azul);
 }
-.container-linguagens {
+/*.container-linguagens {
     height: 100%;
     max-width: 1200px;
     display: grid;
@@ -353,6 +426,65 @@ main{
     grid-gap: 37px;
     padding: 21px;
     background-color: #dff2ff;
+}*/
+.container-img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 3px 3px 6px 1px rgb(175, 175, 175);
+    transition: .3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-card{
+    width: 100%;
+    height: 100%;
+}
+.img-card-desativada{
+    display: none;
+}
+.js{
+    background-image: url(../img/card-js.png);
+}
+.js-active{
+    background-image: url(../img/card-js-ativo.png);
+}
+.js:hover{
+    background-image: url(../img/card-js-ativo.png);
+}
+.html{
+    background-image: url('../img/card-html-css.png');
+}
+.html:hover{
+    background-image: url('../img/card-html-css-ativo.png');
+}
+.git{
+    background-image: url('../img/card-git.png');
+}
+.git:hover{
+    background-image: url('../img/card-git-ativo.png');
+}
+.mysql{
+    background-image: url('../img/card-mysql.png');
+}
+.mysql:hover{
+    background-image: url('../img/card-mysql-ativo.png');
+}
+.php{
+    background-image: url("../img/card-php.png");
+}
+.php:hover{
+    background-image: url("../img/card-php-ativo.png");
+}
+.design-ux{
+    background-image: url("../img/card-design-ux.png");
+}
+.design-ux:hover{
+    background-image: url("../img/card-design-ux-ativo.png");
+}
+.img-slid{
+    width: 110%;
+    height: 110%;
 }
 .linguagem{
     background: var(--claro);
@@ -393,24 +525,6 @@ main{
     max-width: 181px;
     margin: auto;
     color: rgba(255, 255, 255, 0.884);
-}
-#js{
-    grid-area: js;
-}
-#html{
-    grid-area: html;
-}
-#css{
-    grid-area: css;
-}
-#git{
-    grid-area: git;
-}
-#photoshop{
-    grid-area: photoshop;
-}
-#apis{
-    grid-area: apis;
 }
 .container-projetos{
     padding: 197px 0;
