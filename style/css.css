@@ -49,6 +49,7 @@ a{
     background-image: url('../img/header-background2.png');
     transition: .3s;
     opacity: 1;
+    
 }
 .h-btns{
     max-width: 1200px;
@@ -60,6 +61,9 @@ a{
     align-items: center;
     position: relative;
     margin: auto;
+}
+.h-btns-active{
+    padding-left: 80px;
 }
 .link-menu-hamburguer{
     display: none;
@@ -244,7 +248,13 @@ main{
     font-family: 'PT Sans', sans-serif;
     font-size: 30px;
     font-weight: 700;
+    text-align: left; 
+}
+.subtitulo-align-left{
     text-align: left;
+}
+.subtitulo-align-center{
+    text-align: center;
 }
 .sub1::after{
     content: "";
@@ -304,8 +314,8 @@ main{
     height: 950px;
 }*/
 .linguagens{
-    background-color: #c7e5ff;
-    padding: 50px 0;
+    background-color: var(--claro);
+    padding: 150px 0;
 }
 .container-linguagens{
     max-width: 1200px;
@@ -400,17 +410,17 @@ main{
     content: " ";
     display: block;
     width: 70px;
-    height: 3px;
+    height: 5px;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 30px;
-    background-color: var(--azul);
+    background-color: var(--azul);  
 }
 .sub2::before{
     content: " ";
     display: block;
     width: 70px;
-    height: 3px;
+    height: 5px;
     margin: auto;
     background-color: var(--azul);
 }
@@ -435,6 +445,7 @@ main{
     transition: .3s;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .img-card{
     width: 100%;
@@ -449,37 +460,37 @@ main{
 .js-active{
     background-image: url(../img/card-js-ativo.png);
 }
-.js:hover{
+/*.js:hover{
     background-image: url(../img/card-js-ativo.png);
-}
+}*/
 .html{
     background-image: url('../img/card-html-css.png');
 }
-.html:hover{
+.html-active{
     background-image: url('../img/card-html-css-ativo.png');
 }
 .git{
     background-image: url('../img/card-git.png');
 }
-.git:hover{
+.git-active{
     background-image: url('../img/card-git-ativo.png');
 }
 .mysql{
     background-image: url('../img/card-mysql.png');
 }
-.mysql:hover{
+.mysql-active{
     background-image: url('../img/card-mysql-ativo.png');
 }
 .php{
     background-image: url("../img/card-php.png");
 }
-.php:hover{
+.php-active{
     background-image: url("../img/card-php-ativo.png");
 }
 .design-ux{
     background-image: url("../img/card-design-ux.png");
 }
-.design-ux:hover{
+.design-ux-active{
     background-image: url("../img/card-design-ux-ativo.png");
 }
 .img-slid{
@@ -527,14 +538,30 @@ main{
     color: rgba(255, 255, 255, 0.884);
 }
 .container-projetos{
-    padding: 197px 0;
-    background-color: var(--claro);
+    /*overflow: hidden;*/
+    padding: 100px 0;
+    /*background: rgb(170,94,221);
+background: linear-gradient(90deg, rgba(170,94,221,1) 0%, rgba(251,154,154,1) 45%, rgba(255,251,120,1) 100%);*/
+background: rgb(215,167,247);
+background: linear-gradient(90deg, rgba(215,167,247,1) 0%, rgba(251,168,168,1) 45%, rgba(254,252,190,1) 100%);
+}
+.content-projetos{
+    margin-bottom: 80px;
 }
 .projetos{
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.slider2{
+    max-width: 1200px;
+    padding: 0 21px;
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin: auto;
+    height: 425px;
 }
 .projetos-subtitulo{
     display: flex;
@@ -587,6 +614,7 @@ main{
 }
 .cards-projeto{
     width: 100%;
+    height: 65%;
 }
 .slides{
     width: 30%;
@@ -601,8 +629,8 @@ main{
 }
 .projeto-descricao{
     background-color: white;
-    height: 100%;
-    padding: 7px 21px;
+    height: 35%;
+    padding: 21px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -610,12 +638,13 @@ main{
 
 }
 .nome-projeto{
-    background-color: #1098ad;
+    background-color: #98aeff;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 27px;
     width: fit-content;
     padding: 0 10px;
+    
 }
 .desc-projeto{
     color: rgb(95, 95, 95);
@@ -753,7 +782,9 @@ footer{
 .gradient-container{
     height: 100%;
     padding: 8px 0;
-
+    border-radius: 19px;
+    background-color: white;
+    overflow: hidden;
 }
 .gradient-border {
   --borderWidth: 3px;
@@ -761,7 +792,7 @@ footer{
   position: relative;
   border-radius: var(--borderWidth);
 }
-.gradient-border:after {
+/*.gradient-border:after {
   content: '';
   position: absolute;
   top: calc(-2 * var(--borderWidth));
@@ -773,7 +804,7 @@ footer{
   z-index: -1;  
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
-}
+}*/
 
 
 @keyframes animatedgradient {

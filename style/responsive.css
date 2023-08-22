@@ -42,19 +42,22 @@
 
 
 @media screen and (max-width: 1200px) {
+    .h-container{
+        height: 54px;
+        padding: 0 21px 0 21px;
+        background-color: var(--azul);
+    }
     .container-linguagens{
         display: block;
-        width: 570px;
-        /*gap: 20px;
-        display: flex;
-        flex-direction: column;*/
+        max-width: 570px;
+    }
     }
     .conteudo-linguagens{
         width: auto;
         height: auto;
     }
     .exibicao-card {
-        width: 492px;
+        width: 95%;
         margin: 30px auto;
         height: 384px;
     }
@@ -79,7 +82,6 @@
 }
 .foto-exibir{
     height: 185px;
-}
 }
 
 @media screen and (max-width: 800px) {
@@ -149,5 +151,10 @@
     }
     .subtitulo{
         font-size: 21px;
+    }
+}
+@media screen and (max-width:500px) {
+    .container-img{
+        height: 136px;
     }
 }

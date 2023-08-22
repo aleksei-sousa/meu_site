@@ -67,34 +67,53 @@ const alvo = document.querySelector('#inicio')
 const hBtns = document.querySelector(".h-btns")
 //função que esconde e mostra o plano nde fundo do header
 addEventListener("scroll", ()=>{
-    if(alvo.getBoundingClientRect().bottom < 326){
+    updateHeader()
+    /*if(alvo.getBoundingClientRect().bottom < 326){
         const header = document.querySelector('.h-background')
         adicionarClasse(header, 'fade')
-        hBtns.style.maxWidth = '1009px';
-        //max-width: 1097px;
-
+        if(window.innerWidth>800){
+        hBtns.style.paddingLeft = '80px';
+        }
     }
     if(alvo.getBoundingClientRect().bottom > 326){
         const header = document.querySelector('.h-background')
         removerClasse(header, 'fade')
-        hBtns.style.maxWidth = '1200px';
-    }
+        if(window.innerWidth<801){
+            hBtns.style.padding = '21px';
+        }else{
+            hBtns.style.padding = '0';
+        }
+       
+        
+    }*/
 })
 
-//let ddd = document.querySelector('.h-background').style.filter = 'brightness(0.8)'
-//ddd.style.filter = 'brightness(0.8)'
+const updateHeader = ()=>{
+    let marcação = alvo.getBoundingClientRect().bottom
+    let header = document.querySelector('.h-background')
+    if(marcação < 326){
+        adicionarClasse(header, 'fade')
+        if(window.innerWidth>800){
+            adicionarClasse(hBtns, 'h-btns-active')
+        }
+    }else if (marcação > 326){
+        removerClasse(header, 'fade')
+        removerClasse(hBtns, 'h-btns-active')
+    }
+}
 
-
-/*
-1 evento de entrada do mouse chamando uma função
-uma queryAll que vai marcar todos com display none
-*/
 const exibicaoCards = [...document.querySelectorAll(".exibicao-card")]
 const caards = [...document.querySelectorAll(".container-img")]
 console.log(caards)
 caards.map((e) => {
     e.addEventListener("mouseover", (w)=>{
         let id = w.target.dataset.id
+        console.log(w.target.dataset.id)
+        caards.forEach((e)=>{
+            removerClasse(e, e.dataset.id+'-active')
+            console.log(e.dataset.id)
+        })
+        adicionarClasse(w.target, id+"-active")
         exibicaoCards.forEach((e)=>{
             removerClasse(e, 'active')
         })
@@ -104,35 +123,6 @@ caards.map((e) => {
     })
 
 })
-
-/*caards.map((e) => {
-    e.addEventListener("mouseout", (w)=>{
-                switch(w.target.classList[1]){
-            case 'js':
-                //console.log('js')
-                console.log(w.target)
-                w.target.style.display = 'block'
-                document.querySelector(".img-card2").style.display = 'none'
-                break
-            case 'html':
-                console.log('html')
-                break
-            case 'git':
-                console.log('git')
-                break
-            case 'sql':
-                console.log('sql')
-                break
-            case 'php':
-                console.log('php')
-                break
-            case 'ux':
-                console.log('ux')
-                break
-        }
-    })
-})*/
-
 
 function mouseOver (tt) {
     
