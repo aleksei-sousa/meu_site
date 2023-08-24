@@ -14,7 +14,7 @@
     header{
         height: 50px;
     }
-   /* .container-linguagens {
+   /*.container-linguagens {
         height: 100%;
         max-width: 403px;
         display: grid;
@@ -41,7 +41,7 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
     .h-container{
         height: 54px;
         padding: 0 21px 0 21px;
@@ -51,38 +51,33 @@
         display: block;
         max-width: 570px;
     }
-    }
     .conteudo-linguagens{
         width: auto;
         height: auto;
     }
-    .exibicao-card {
+    .exibicao-card{
         width: 95%;
         margin: 30px auto;
         height: 384px;
+        gap: 0;
     }
-    .container-exibicao-card{
-        padding: 15px;
-    }
-    .info-card {
-        padding: 0px 30px 30px 30px;
+    .foto-exibir{
+        height: 163px;
     }
     .container-img{
-        height: 178px;
+        height: 153px;
     }
-.texto-info {
-    font-family: Arial, Helvetica, sans-serif;
-    color: grey;
-    font-size: 16px;
-    line-height: 24px;
-}
-.btn-exibicao {
-    width: 109px;
-    padding: 6px 0;
-}
-.foto-exibir{
-    height: 185px;
-}
+    .btn-exibicao {
+        width: 109px;
+        padding: 6px 0;
+    }
+    .texto-info {
+        font-size: 17px;
+        line-height: 26px;
+    }
+    }
+
+
 
 @media screen and (max-width: 800px) {
     .h-btns{
@@ -152,9 +147,28 @@
     .subtitulo{
         font-size: 21px;
     }
+
 }
 @media screen and (max-width:500px) {
     .container-img{
         height: 136px;
+    }
+    .eu{
+        font-size: 13px;
+    }
+    .ling-credito-projeto{
+        font-size: 13px;
+    }
+    .desc-projeto {
+        font-size: 14px;
+    }
+    .nome-projeto{
+        font-size: 22px;
+    }
+    .projeto-descricao{
+        padding: 16px;
+    }
+    .nome-projeto{
+        padding: 0 4px;
     }
 }
