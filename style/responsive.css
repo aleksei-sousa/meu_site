@@ -65,7 +65,7 @@
         height: 163px;
     }
     .container-img{
-        height: 153px;
+        height: 195px;
     }
     .btn-exibicao {
         width: 109px;
@@ -149,21 +149,26 @@
     }
 
 }
-@media screen and (max-width:500px) {
-    .container-img{
-        height: 136px;
-    }
+@media screen and (max-width:550px) {
     .eu{
-        font-size: 13px;
+        font-size: 11px;
     }
-    .ling-credito-projeto{
-        font-size: 13px;
+    .ling-credito-projeto {
+        font-size: 11px;
+    }
+}
+@media screen and (max-width:500px) {
+    .eu{
+        font-size: 17px;
+    }
+    .container-img{
+        height: 234px;
     }
     .desc-projeto {
-        font-size: 14px;
+        font-size: 16px;
     }
     .nome-projeto{
-        font-size: 22px;
+        font-size: 30px;
     }
     .projeto-descricao{
         padding: 16px;
@@ -171,4 +176,23 @@
     .nome-projeto{
         padding: 0 4px;
     }
+    .texto-info {
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .info-card{
+        padding: 5px 25px 25px 25px;
+    }
+    .ling-credito-projeto {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:400px) {
+    .nome-projeto{
+        font-size: 18px;
+    }
+    .desc-projeto {
+        font-size: 13px;
+    }
+
 }

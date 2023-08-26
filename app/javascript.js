@@ -1,5 +1,3 @@
-
-
 const btn = [...document.querySelectorAll('.nav-btn')]
 
 btn.map((ele) => {
@@ -22,13 +20,33 @@ btn.map((ele) => {
     
 });
 
+
+
+//===================================================
 const removerClasse = (elementos, classe)=>{
-        elementos.classList.remove(classe)
-        
+        elementos.classList.remove(classe)   
 }
 const adicionarClasse = (ele, classe)=>{
         ele.classList.add(classe)
 }
+
+const updateHeader = ()=>{
+    let marcação = alvo.getBoundingClientRect().bottom
+    let header = document.querySelector('.h-background')
+    if(marcação < 326){
+        adicionarClasse(header, 'fade')
+        if(window.innerWidth>800){
+            adicionarClasse(hBtns, 'h-btns-active')
+        }
+    }else if (marcação > 326){
+        removerClasse(header, 'fade')
+        removerClasse(hBtns, 'h-btns-active')
+    }
+}
+
+//===================================================
+
+
 
 let contadorSide = false
 let navbar = document.querySelector('.nav-btns')
@@ -46,6 +64,8 @@ const sidebar = ()=>{
     }
 
 }
+
+
 function fecharSideBar () {
     if(contadorSide){
         sidebar()
@@ -53,54 +73,19 @@ function fecharSideBar () {
 }
 
 
-
-
-
-//se for menor que 1200 vai trocar classe
-/*if(window.innerWidth <=1200){
-    let ele = document.querySelector('.conteudo-linguagens')
-    adicionarClasse(ele, 'slide-cards')
-}*/
-
 const alvo = document.querySelector('#inicio')
-
 const hBtns = document.querySelector(".h-btns")
-//função que esconde e mostra o plano nde fundo do header
+
 addEventListener("scroll", ()=>{
+    //função que esconde e mostra o plano nde fundo do header
     updateHeader()
-    /*if(alvo.getBoundingClientRect().bottom < 326){
-        const header = document.querySelector('.h-background')
-        adicionarClasse(header, 'fade')
-        if(window.innerWidth>800){
-        hBtns.style.paddingLeft = '80px';
-        }
-    }
-    if(alvo.getBoundingClientRect().bottom > 326){
-        const header = document.querySelector('.h-background')
-        removerClasse(header, 'fade')
-        if(window.innerWidth<801){
-            hBtns.style.padding = '21px';
-        }else{
-            hBtns.style.padding = '0';
-        }
-       
-        
-    }*/
+
 })
 
-const updateHeader = ()=>{
-    let marcação = alvo.getBoundingClientRect().bottom
-    let header = document.querySelector('.h-background')
-    if(marcação < 326){
-        adicionarClasse(header, 'fade')
-        if(window.innerWidth>800){
-            adicionarClasse(hBtns, 'h-btns-active')
-        }
-    }else if (marcação > 326){
-        removerClasse(header, 'fade')
-        removerClasse(hBtns, 'h-btns-active')
-    }
-}
+
+
+
+
 
 const exibicaoCards = [...document.querySelectorAll(".exibicao-card")]
 const caards = [...document.querySelectorAll(".container-img")]
@@ -124,6 +109,34 @@ caards.map((e) => {
 
 })
 
-function mouseOver (tt) {
-    
-}
+window.sr = ScrollReveal({ reset: true});
+
+var slideLeft = {
+    distance: '150%',
+    origin: 'left',
+    opacity: null,
+    duration: 1000
+};
+var slideRight = {
+    distance: '150%',
+    origin: 'right',
+    opacity: null
+};
+
+//sr.reveal(".m-apresentacao", slideLeft)
+//sr.reveal(".habilidades", slideLeft)
+sr.reveal(".slider2", slideLeft)
+sr.reveal(".container-linguagens", slideLeft)
+
+sr.reveal(".ola", {distance: '200%', origin: 'right', duration: 1000})
+sr.reveal(".meu-nome", {distance: '200%', origin: 'left', duration: 1200})
+sr.reveal(".desenvolvedor", {distance: '200%', origin: 'left', duration: 1400})
+sr.reveal(".auto-descricao", {distance: '200%', origin: 'left', duration: 1600})
+sr.reveal(".btn-mais", {distance: '700%', origin: 'left', duration: 1800})
+
+sr.reveal(".escolha-me", {duration: 1000})
+sr.reveal(".descrevendo-me", {distance: '100%', origin: 'right', duration: 1200})
+sr.reveal("#hab1", {distance: '20%', origin: 'right  ', duration: 1000, delay:1000})
+sr.reveal("#hab2", {distance: '20%', origin: 'right  ', duration: 1000, delay:2000})
+sr.reveal("#hab3", {distance: '20%', origin: 'right  ', duration: 1000, delay:3000})
+sr.reveal("#hab4", {distance: '20%', origin: 'right  ', duration: 1000, delay:4000})

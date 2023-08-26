@@ -40,6 +40,21 @@ a{
     padding: 0 21px;
 
 }
+/*.h-backgroun-hidden{
+    overflow: hidden;
+    max-width: 1200px;
+    height: 70px;
+    width: 1200px;
+    position: absolute;
+}*/
+@keyframes estica {
+    0% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+   }
 .h-background{
     position: absolute;
         background-image: url('../img/header-background2.png');
@@ -48,12 +63,14 @@ a{
         height: 100%;
         opacity: 0;
         transition: .3s;
+        animation-name: estica;
 }
 .h-background.fade{
     background-image: url('../img/header-background2.png');
     transition: .3s;
     opacity: 1;
-    
+    animation: estica;
+    /*transform: scaleX(1.9) translateX(234px);*/
 }
 .h-btns{
     max-width: 1200px;
@@ -65,9 +82,11 @@ a{
     align-items: center;
     position: relative;
     margin: auto;
+    transition: .3s;
 }
 .h-btns-active{
     padding-left: 80px;
+    transition: .3s;
 }
 .link-menu-hamburguer{
     display: none;
@@ -84,15 +103,22 @@ a{
 }
 .link-nav{
     position: relative;
+    transition: 1000ms linear;
 }
-.link-nav:hover::after{
+.link-nav::after{
     position: absolute;
     content: ' ';
-    background-color: antiquewhite;
+    background-color: transparent;
     width: 100%;
     height: 3px;
     z-index: -1;
     left: 0px;
+    top: 17px;
+    transition: .4s;
+}
+.link-nav:hover::after{
+    background-color: antiquewhite;
+    transition: .4s;
     top: 28px;
 }
 .link-nav-ativa::after{
@@ -202,6 +228,9 @@ main{
     margin: 6px 0px;
     color: white;
 }
+.btn-mais:hover{
+    background-color: rgb(30, 138, 62);
+}
 .retangulo{
     background-color: var(--claro);
     width: 1576px;
@@ -224,6 +253,7 @@ main{
     background-color: var(--claro);
 }
 .sobre-mim{
+    overflow: hidden;
     background-color: var(--claro);
     max-width: 1200px;
     height: auto;
@@ -456,9 +486,6 @@ main{
 .js-active{
     background-image: url(../img/card-js-ativo.png);
 }
-/*.js:hover{
-    background-image: url(../img/card-js-ativo.png);
-}*/
 .html{
     background-image: url('../img/card-html-css.png');
 }
@@ -557,6 +584,21 @@ background: linear-gradient(90deg, rgba(215,167,247,1) 0%, rgba(251,168,168,1) 4
     gap: 35px;
     margin: auto;
     /*height: 425px;*/
+    /*position: relative;*/
+}
+/*.slider2::before{
+    content: ' ';
+    display: block;
+    width: 100vw;
+    height: 100px;
+    background-color: #7e0ffc;
+    position: absolute;
+}*/
+.slide-container{
+    width: 100%;
+    background: linear-gradient(90deg, rgb(231, 196, 255) 0%, rgb(248, 188, 188) 45%, rgb(255, 255, 235) 100%);
+    height: 100%;
+    padding: 45px 0 10px;
 }
 .projetos-subtitulo{
     display: flex;
