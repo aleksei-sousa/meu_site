@@ -248,9 +248,9 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
     justify-content: center;
     background-color: var(--claro);
+    margin: 160px 0px;
 }
 .sobre-mim{
     overflow: hidden;

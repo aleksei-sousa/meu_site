@@ -71,7 +71,7 @@
 
         <div id="container-sobre-mim" class="container-sobre-mim">
             <div id="sobre-mim" class="sobre-mim">
-               <div class="foto-apontando"></div>
+                <div class="foto-apontando"></div>
                 <div class="habilidades">
                     <div class="escolha-me">
                         <div class="sobre">Sobre mim</div>
@@ -179,7 +179,6 @@
             <div class="container-linguagens">
                 <div class="conteudo-linguagens slide-cards" >
                     <div class="container-img js js-active" data-id="js"></div>
-
                     <div class="container-img html" data-id="html"></div>
                     <div class="container-img git" data-id="git"></div>
                     <div class="container-img mysql" data-id="mysql"></div>
@@ -208,9 +207,7 @@
                         
                     <div class="info-card">
                         <h1 class="subtitulo-exibicao">Html/Css</h1>
-                        <p class="texto-info">Javascript, ou simplesmente JS, é uma linguagem de
-                                programação de uso geral, aplicada principalmente para
-                                desenvolvimento web e desenvolvimento de software.</p>
+                        <p class="texto-info">Duas ferramentas básicas pra websites. Enquanto o Html é responsável pela estrutura de marcação (esqueleto),o Css é responsável pelo estilo(estética)</p>
                         <a class="btn-exibicao" href="">Leia mais</a>
                     </div>
                 </div>
@@ -223,9 +220,7 @@
                         
                     <div class="info-card">
                         <h1 class="subtitulo-exibicao">Git</h1>
-                        <p class="texto-info">Javascript, ou simplesmente JS, é uma linguagem de
-                                programação de uso geral, aplicada principalmente para
-                                desenvolvimento web e desenvolvimento de software.</p>
+                        <p class="texto-info">Git e Github são utilizados no dia a dia das pessoas que criam softwares por um motivo bem simples: ter uma forma fácil de gerenciar o código-fonte da aplicação.</p>
                         <a class="btn-exibicao" href="">Leia mais</a>
                     </div>
                 </div>
@@ -238,9 +233,7 @@
                         
                     <div class="info-card">
                         <h1 class="subtitulo-exibicao">Mysql</h1>
-                        <p class="texto-info">Javascript, ou simplesmente JS, é uma linguagem de
-                                programação de uso geral, aplicada principalmente para
-                                desenvolvimento web e desenvolvimento de software.</p>
+                        <p class="texto-info">O MySQL é um sistema de gerenciamento e criação de banco de dados. Sendo possível armazenar diferentes tipos de dados dos usuários.</p>
                         <a class="btn-exibicao" href="">Leia mais</a>
                     </div>
                 </div>
@@ -313,9 +306,9 @@
 
         window.addEventListener('resize', (e)=>{
             //se for menor que 1200
+            console.log(caards)
             if(window.innerWidth <= 1200 & !(document.querySelector(".conteudo-linguagens").classList.contains("slick-initialized"))){
-                console.log("menor")
-
+                //criando o slide quando é menor que 1200px
                 $('.slide-cards').slick({
                         dots: false,
                         slidesToShow: 3,
@@ -332,8 +325,8 @@
                         }]
                 });
             } else if (window.innerWidth > 1200 &(document.querySelector(".conteudo-linguagens").classList.contains("slick-initialized"))){
-                console.log("maior")
                 apagarSlide()
+                adicionarSlide()
             }
 })
 
@@ -365,12 +358,12 @@
          });
 
 
-const codigoHtml = `<div class="container-img js"><img class="img-card" src="./img/card-js3.jpg" alt=""></div>
-                    <div class="container-img html"><img class="img-card" src="./img/card-html-css3.jpg" alt=""></div>
-                    <div class="container-img git"><img class="img-card" src="./img/card-git3.jpg" alt=""></div>
-                    <div class="container-img sql"><img class="img-card" src="./img/card-mysql.jpg" alt=""></div>
-                    <div class="container-img php"><img class="img-card" src="./img/card-php.jpg" alt=""></div>
-                    <div class="container-img ux"><img class="img-card" src="./img/card-design-ux.jpg" alt=""></div>`
+const codigoHtml = `<div class="container-img js js-active" data-id="js"></div>
+                    <div class="container-img html" data-id="html"></div>
+                    <div class="container-img git" data-id="git"></div>
+                    <div class="container-img mysql" data-id="mysql"></div>
+                    <div class="container-img php" data-id="php"></div>
+                    <div class="container-img design-ux" data-id="design-ux"></div>`
     
     
     const apagarSlide = () => {
@@ -381,7 +374,7 @@ const codigoHtml = `<div class="container-img js"><img class="img-card" src="./i
     }
     if(window.innerWidth > 1200){
         //apagarSlide()
-        //adicionarSlide
+        //adicionarSlide()
     }
     if(window.innerWidth < 1200){
         $('.slide-cards').slick({

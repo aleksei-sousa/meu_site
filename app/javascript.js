@@ -89,14 +89,13 @@ addEventListener("scroll", ()=>{
 
 const exibicaoCards = [...document.querySelectorAll(".exibicao-card")]
 const caards = [...document.querySelectorAll(".container-img")]
-console.log(caards)
 caards.map((e) => {
     e.addEventListener("mouseover", (w)=>{
         let id = w.target.dataset.id
         console.log(w.target.dataset.id)
         caards.forEach((e)=>{
             removerClasse(e, e.dataset.id+'-active')
-            console.log(e.dataset.id)
+            //console.log(e.dataset.id)
         })
         adicionarClasse(w.target, id+"-active")
         exibicaoCards.forEach((e)=>{

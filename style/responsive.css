@@ -1,3 +1,43 @@
+@media (max-width: 1200px) {
+    .info-card{
+        padding: 25px 30px 25px 30px;
+    }
+    .h-container{
+        height: 54px;
+        padding: 0 21px 0 21px;
+        background-color: var(--azul);
+    }
+    .container-linguagens{
+        display: block;
+        max-width: 570px;
+    }
+    .conteudo-linguagens{
+        width: auto;
+        height: auto;
+    }
+    .exibicao-card{
+        width: 95%;
+        margin: 30px auto;
+        height: 384px;
+        gap: 0;
+    }
+    .foto-exibir{
+        height: 163px;
+    }
+    .container-img{
+        height: 195px;
+    }
+    .btn-exibicao {
+        width: 109px;
+        padding: 6px 0;
+    }
+    .texto-info {
+        font-size: 17px;
+        line-height: 26px;
+    }
+    }
+
+
 @media screen and (max-width: 1000px) {
     .logomarca{
         background-color: transparent;
@@ -39,44 +79,6 @@
         top: 22px;
     }
 }
-
-
-@media (max-width: 1200px) {
-    .h-container{
-        height: 54px;
-        padding: 0 21px 0 21px;
-        background-color: var(--azul);
-    }
-    .container-linguagens{
-        display: block;
-        max-width: 570px;
-    }
-    .conteudo-linguagens{
-        width: auto;
-        height: auto;
-    }
-    .exibicao-card{
-        width: 95%;
-        margin: 30px auto;
-        height: 384px;
-        gap: 0;
-    }
-    .foto-exibir{
-        height: 163px;
-    }
-    .container-img{
-        height: 195px;
-    }
-    .btn-exibicao {
-        width: 109px;
-        padding: 6px 0;
-    }
-    .texto-info {
-        font-size: 17px;
-        line-height: 26px;
-    }
-    }
-
 
 
 @media screen and (max-width: 800px) {
@@ -150,14 +152,40 @@
 
 }
 @media screen and (max-width:550px) {
+
+    .sobre-mim{
+        flex-direction: column-reverse;
+    }
+    .habilidades{
+        width: 100%;
+    }
+    .foto-apontando{
+        width: 72%;
+    }
     .eu{
         font-size: 11px;
     }
     .ling-credito-projeto {
         font-size: 11px;
     }
+    .container-sobre-mim{
+        margin: 100px 0px;
+    }
+    .habilidades{
+        margin-bottom: 60px;
+    }
+    .linguagens{
+        padding: 100px 0
+    }
+    .container-projetos {
+        padding: 66px 0 40px;
+    }
+    .foto-apontando {
+        height: 350px;
+    }
 }
 @media screen and (max-width:500px) {
+
     .eu{
         font-size: 17px;
     }
@@ -180,9 +208,6 @@
         font-size: 15px;
         line-height: 23px;
     }
-    .info-card{
-        padding: 5px 25px 25px 25px;
-    }
     .ling-credito-projeto {
         font-size: 17px;
     }
@@ -192,6 +217,12 @@
         font-size: 18px;
     }
     .desc-projeto {
+        font-size: 13px;
+    }
+    .info-card{
+        padding: 20px 25px 20px 24px;
+    }
+    .texto-info{
         font-size: 13px;
     }
 
