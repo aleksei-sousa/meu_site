@@ -77,37 +77,45 @@
                         <div class="sobre">Sobre mim</div>
                         <div class="subtitulo subtitulo-align-left sub1">Porque você deve me escolher!</div>
                     </div>
-                    <div class="descrevendo-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quis aliquid quidem accusantium hic qui laborum, asperiores voluptas eveniet nulla, dicta repellat corrupti quam! Ex soluta perferendis vitae nam saepe.</div>
+                    <div class="descrevendo-me">Olá, meu nome é Aleksei Sousa, 23 anos, sou programador <b>Front End</b> e <b>designer</b> freelancer. Busco as melhores soluções no mundo digital. Minhas maiores qualidades profissionais:</div>
                     <div class="niveis">
-                        <div class="habilidade" id="hab1">
-                            <div class="nome-habilidade">Aprendizado rápido</div>
+                        <div class="habilidade">
+                            <div class="nome-habilidade">Respeitar prazos</div>
                             <div class="barra">
-                                <div class="barra-verde"></div>
-                                <div class="barra-btn"></div>
+                                <div class="barra-ativa" id="hab1">
+                                    <div class="barra-verde"></div>
+                                    <div class="barra-btn"></div>
+                                </div>
                                 <div class="barra-cinza"></div>
                             </div>
                         </div>
-                        <div class="habilidade" id="hab2">
+                        <div class="habilidade">
+                            <div class="nome-habilidade">Soluções no design e código</div>
+                            <div class="barra">
+                                <div class="barra-ativa" id="hab2">
+                                    <div class="barra-verde"></div>
+                                    <div class="barra-btn"></div>
+                                </div>
+                                <div class="barra-cinza"></div>
+                            </div>
+                        </div>
+                        <div class="habilidade">
                             <div class="nome-habilidade">Criatividade</div>
                             <div class="barra">
-                                <div class="barra-verde"></div>
-                                <div class="barra-btn"></div>
+                                <div class="barra-ativa" id="hab3">
+                                    <div class="barra-verde"></div>
+                                    <div class="barra-btn"></div>
+                                </div>
                                 <div class="barra-cinza"></div>
                             </div>
                         </div>
-                        <div class="habilidade" id="hab3">
-                            <div class="nome-habilidade">Aprendizado rápido</div>
+                        <div class="habilidade">
+                            <div class="nome-habilidade">Disponibilidade p/ qualquer dúvida</div>
                             <div class="barra">
-                                <div class="barra-verde"></div>
-                                <div class="barra-btn"></div>
-                                <div class="barra-cinza"></div>
-                            </div>
-                        </div>
-                        <div class="habilidade" id="hab4">
-                            <div class="nome-habilidade">Criatividade</div>
-                            <div class="barra">
-                                <div class="barra-verde"></div>
-                                <div class="barra-btn"></div>
+                                <div class="barra-ativa" id="hab4">
+                                    <div class="barra-verde"></div>
+                                    <div class="barra-btn"></div>
+                                </div>
                                 <div class="barra-cinza"></div>
                             </div>
                         </div>
@@ -219,7 +227,7 @@
                     </div>
                         
                     <div class="info-card">
-                        <h1 class="subtitulo-exibicao">Git</h1>
+                        <h1 class="subtitulo-exibicao">Git / Github</h1>
                         <p class="texto-info">Git e Github são utilizados no dia a dia das pessoas que criam softwares por um motivo bem simples: ter uma forma fácil de gerenciar o código-fonte da aplicação.</p>
                         <a class="btn-exibicao" href="">Leia mais</a>
                     </div>
@@ -246,9 +254,7 @@
                         
                     <div class="info-card">
                         <h1 class="subtitulo-exibicao">PHP</h1>
-                        <p class="texto-info">Javascript, ou simplesmente JS, é uma linguagem de
-                                programação de uso geral, aplicada principalmente para
-                                desenvolvimento web e desenvolvimento de software.</p>
+                        <p class="texto-info">O PHP possui a vantagem de seus scripts serem executados no lado do <b>servidor</b>, entregando para o cliente geralmente um conjunto de HTML, CSS e JavaScript.</p>
                         <a class="btn-exibicao" href="">Leia mais</a>
                     </div>
                 </div>
@@ -306,7 +312,7 @@
 
         window.addEventListener('resize', (e)=>{
             //se for menor que 1200
-            console.log(caards)
+            //console.log(caards)
             if(window.innerWidth <= 1200 & !(document.querySelector(".conteudo-linguagens").classList.contains("slick-initialized"))){
                 //criando o slide quando é menor que 1200px
                 $('.slide-cards').slick({
@@ -390,9 +396,10 @@ const codigoHtml = `<div class="container-img js js-active" data-id="js"></div>
                 }
             },
         {
-            breakpoint: 500,
+            breakpoint: 550,
             settings:{
                 slidesToShow: 2,
+                slidesToScroll: 2,
                 arrows:false,
                 dots: true,
                 infinite: true

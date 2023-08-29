@@ -1,4 +1,16 @@
 @media (max-width: 1200px) {
+    .container-sobre-mim{
+        padding: 120px 0px;
+    }
+    .foto-apontando{
+        height: 350px;
+    }
+    .container-projetos{
+        padding: 35px 0 1px 0px;
+    }
+    .linguagens{
+        padding: 100px 0;
+    }
     .info-card{
         padding: 25px 30px 25px 30px;
     }
@@ -16,7 +28,7 @@
         height: auto;
     }
     .exibicao-card{
-        width: 95%;
+        width: 94%;
         margin: 30px auto;
         height: 384px;
         gap: 0;
@@ -152,12 +164,14 @@
 
 }
 @media screen and (max-width:550px) {
-
+    .container-img{
+        height: 276px;
+    }
     .sobre-mim{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .habilidades{
-        width: 100%;
+        width: 95%;
     }
     .foto-apontando{
         width: 72%;
@@ -169,16 +183,13 @@
         font-size: 11px;
     }
     .container-sobre-mim{
-        margin: 100px 0px;
+        padding: 120px 0px;
     }
     .habilidades{
-        margin-bottom: 60px;
+        margin-top: 50px;
     }
     .linguagens{
-        padding: 100px 0
-    }
-    .container-projetos {
-        padding: 66px 0 40px;
+        padding: 80px 0
     }
     .foto-apontando {
         height: 350px;
@@ -189,9 +200,7 @@
     .eu{
         font-size: 17px;
     }
-    .container-img{
-        height: 234px;
-    }
+
     .desc-projeto {
         font-size: 16px;
     }
@@ -212,7 +221,15 @@
         font-size: 17px;
     }
 }
+@media screen and (max-width:480px){
+    .container-img{
+        height: 222px;
+    }
+}
 @media screen and (max-width:400px) {
+    .container-img{
+        height: 185px;
+    }
     .nome-projeto{
         font-size: 18px;
     }

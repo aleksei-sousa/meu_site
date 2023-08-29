@@ -4,6 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+::selection{
+    background-color: #22ffaa;
+    color: black;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -102,6 +107,7 @@ a{
     z-index: 16;
 }
 .link-nav{
+    user-select: none;
     position: relative;
     transition: 1000ms linear;
 }
@@ -250,7 +256,7 @@ main{
     align-items: center;
     justify-content: center;
     background-color: var(--claro);
-    margin: 160px 0px;
+    padding: 160px 0px;
 }
 .sobre-mim{
     overflow: hidden;
@@ -266,10 +272,22 @@ main{
 .foto-apontando {
     width: 46%;
     background-color: rgb(255, 0, 0);
-    height: 500px;
+    height: 350px;
 }
 .habilidades{
     width: 48%;
+}
+#hab1{
+    width: 87%;
+}
+#hab2{
+    width: 95%;
+}
+#hab3{
+    width: 90%;
+}
+#hab4{
+    width: 93%;
 }
 .sobre{
     color: var(--azul);
@@ -301,27 +319,38 @@ main{
     border-radius: 50px;
 }
 .descrevendo-me{
+    font-family: 'Roboto';
     text-align: justify;
     margin-top: 15px;
     line-height: 21px;
 }
+.habilidade{
+    padding: 7px 0;
+    position: relative;
+}
 .niveis{
-    margin-top: 25px;
-    
+    overflow: hidden;
+    padding-top: 25px;
 }
 .nome-habilidade{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
+    position: absolute;
+    font-size: 16px;
+    color: #464646;
+    top: -6px;
 }
+
 .barra{
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
+    padding: 12px 0;
 }
 .barra-verde{
     height: 5px;
-    width: 80%;
+    width: 100%;
     background-color: var(--azul);
 }
 .barra-btn{
@@ -332,10 +361,19 @@ main{
     cursor: not-allowed;
     background-color: var(--claro);
 }
+.barra-ativa{
+    position: absolute;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+}
 .barra-cinza{
     height: 5px;
-    width: 19%;
+    width: 100%;
     background-color: rgb(167, 167, 167);
+    position: absolute;
 }
 
 
