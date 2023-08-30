@@ -86,7 +86,9 @@ addEventListener("scroll", ()=>{
 
 
 
+//============== cards das habilidades =================
 
+//função "hover" no javascript
 const exibicaoCards = [...document.querySelectorAll(".exibicao-card")]
 const caards = [...document.querySelectorAll(".container-img")]
 caards.map((e) => {
@@ -105,7 +107,13 @@ caards.map((e) => {
         adicionarClasse(ee,'active')
 
     })
+})
 
+//função de clique que ao ser setada irá bloquear a função "hover"
+caards.map((e)=>{
+    e.addEventListener("click",  (ele)=>{
+        console.log()
+    })
 })
 
 window.sr = ScrollReveal({ reset: true});

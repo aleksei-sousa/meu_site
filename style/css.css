@@ -201,7 +201,7 @@ main{
 }
 .m-apresentacao{
     width: 320px;
-    user-select: none;
+    /*user-select: none;*/
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -233,9 +233,13 @@ main{
     display: flex;
     margin: 6px 0px;
     color: white;
+    transition: .7s;
+    cursor: pointer;
+    user-select: none;
 }
 .btn-mais:hover{
     background-color: rgb(30, 138, 62);
+    transition: .7s;
 }
 .retangulo{
     background-color: var(--claro);
@@ -328,9 +332,15 @@ main{
     padding: 7px 0;
     position: relative;
 }
+.container-niveis{
+    padding: 17px 25px;
+    background-color: #dae5f3;
+    border-radius: 17px;
+    margin-top: 26px;
+}
 .niveis{
     overflow: hidden;
-    padding-top: 25px;
+    padding-top: 17px;
 }
 .nome-habilidade{
     font-family: 'Ubuntu', sans-serif;
@@ -449,7 +459,15 @@ main{
     padding: 10px 0;
     text-align: center;
     border-radius: 17px;
+    background-color: var(--azul);
+    transition: .7s;
+    user-select: none;
 }
+.btn-exibicao:hover{
+    background-color: rgb(30, 138, 62);
+    transition: .7s;
+}
+
 /*.linguagens{
     height: 950px;
     background-image: url('../img/background-linguagens.jpg');
@@ -475,7 +493,7 @@ main{
     width: 70px;
     height: 5px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 4px;
     margin-bottom: 30px;
     background-color: var(--azul);  
 }
