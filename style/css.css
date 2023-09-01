@@ -160,7 +160,7 @@ a{
     background: var(--azul);
     height: 100%;
     align-items: center;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 0px 0px;
     justify-content: space-between;
     transition: .3s;
 }
@@ -466,6 +466,7 @@ main{
 .btn-exibicao:hover{
     background-color: rgb(30, 138, 62);
     transition: .7s;
+    transform: scale(1.1);
 }
 
 /*.linguagens{

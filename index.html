@@ -314,6 +314,7 @@
             //se for menor que 1200
             //console.log(caards)
             if(window.innerWidth <= 1200 & !(document.querySelector(".conteudo-linguagens").classList.contains("slick-initialized"))){
+                //mostrar()
                 //criando o slide quando é menor que 1200px
                 $('.slide-cards').slick({
                         dots: false,
@@ -333,6 +334,9 @@
             } else if (window.innerWidth > 1200 &(document.querySelector(".conteudo-linguagens").classList.contains("slick-initialized"))){
                 apagarSlide()
                 adicionarSlide()
+                mostrar()
+                s()
+                console.log(s())
             }
 })
 
@@ -377,6 +381,8 @@ const codigoHtml = `<div class="container-img js js-active" data-id="js"></div>
     }
     const adicionarSlide =() =>{
         document.querySelector(".conteudo-linguagens").innerHTML = codigoHtml
+        
+
     }
     if(window.innerWidth > 1200){
         //apagarSlide()

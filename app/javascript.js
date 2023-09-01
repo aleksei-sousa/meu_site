@@ -90,31 +90,50 @@ addEventListener("scroll", ()=>{
 
 //função "hover" no javascript
 const exibicaoCards = [...document.querySelectorAll(".exibicao-card")]
-const caards = [...document.querySelectorAll(".container-img")]
+function s (){
+     return caards = [...document.querySelectorAll(".container-img")]
+}
+s()
 caards.map((e) => {
     e.addEventListener("mouseover", (w)=>{
-        let id = w.target.dataset.id
-        console.log(w.target.dataset.id)
-        caards.forEach((e)=>{
-            removerClasse(e, e.dataset.id+'-active')
-            //console.log(e.dataset.id)
-        })
-        adicionarClasse(w.target, id+"-active")
-        exibicaoCards.forEach((e)=>{
-            removerClasse(e, 'active')
-        })
-        let ee = document.querySelector("#"+id)
-        adicionarClasse(ee,'active')
-
+        console.log(sinalCard)
+        if (sinalCard){
+            controlarAtivação(w)
+    }
     })
 })
+
+const controlarAtivação = (w) =>{
+    let id = w.target.dataset.id
+        //console.log(w.target.dataset.id)
+    caards.forEach((e)=>{
+        removerClasse(e, e.dataset.id+'-active')
+        //console.log(e.dataset.id)
+    })
+    adicionarClasse(w.target, id+"-active")
+    exibicaoCards.forEach((e)=>{
+        removerClasse(e, 'active')
+    })
+    let ee = document.querySelector("#"+id)
+    adicionarClasse(ee,'active')
+} 
 
 //função de clique que ao ser setada irá bloquear a função "hover"
 caards.map((e)=>{
     e.addEventListener("click",  (ele)=>{
-        console.log()
+        //console.log(ele.target.dataset.id)
+        sinalCardF()
+        controlarAtivação(ele)
+        console.log('2' + sinalCard)
     })
 })
+
+var sinalCard = true
+const sinalCardF = ()=>{
+    sinalCard = !sinalCard
+    //console.log(sinalCard)
+    return sinalCard
+}
 
 window.sr = ScrollReveal({ reset: true});
 
@@ -152,3 +171,7 @@ sr.reveal("#hab4", {distance: '-110%', opacity: null, origin: 'left  ', duration
 //sr.reveal("#hab2", {distance: '20%', origin: 'right  ', duration: 1000, delay:2000})
 //sr.reveal("#hab3", {distance: '20%', origin: 'right  ', duration: 1000, delay:3000})
 //sr.reveal("#hab4", {distance: '20%', origin: 'right  ', duration: 1000, delay:4000})
+
+function mostrar(){
+    console.log('compativel')
+}
